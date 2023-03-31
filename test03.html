@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test03 - 회원가입 페이지</title>
+<style>
+    .p1{
+        font-style: italic;
+    }
+
+    .p2{
+        font-style: unset;
+    }
+    #pid {
+        color: blue;
+    }
+</style>
+
+</head>
+<body>
+    <h1>회원가입</h1>
+
+    <p class="p1">홍길동</p>
+    <p class="p1">홍길동1</p>
+    <p class="p2">홍길동2</p>
+    <p class="p2">홍길동3</p>
+    <p id="pid">CSS 아이디 적용</p>
+
+   
+	<form action="signup.php" method="post">
+
+    <fieldset>
+        
+		<label for="username">아이디</label><br>
+		<input type="text" id="username" name="username"><br><br>
+        
+		<label for="password">비밀번호</label><br>
+		<input type="password" id="password" name="password"><br><br>
+		
+		<label for="confirm_password">비밀번호 확인</label><br>
+		<input type="password" id="confirm_password" name="confirm_password"><br><br>
+
+        <label for="email">이메일</label><br>
+		<input type="email" id="email" name="email"><br><br>
+
+        <label for="confirm_password">이름</label><br>
+        <input type="text" id="userName" name="userName"><br><br>
+
+        <label for="userDate">생년월일</label><br>
+        <input type="date" id="userDate" name="userDate"><br><br>
+
+        <label for="gender">성별</label><br>
+        <select>
+            <option value="gender" selected hidden>성별</option>
+            <option value="m">남자</option>
+            <option value="w">여자</option>
+        </select><br><br>
+
+        <label for="userDate">휴대전화</label><br>
+        <select>
+            <option value="ko" selected>대한민국 +82</option>
+            <option value="am">1</option>
+            <option value="jp">2</option>
+        </select><br><br>
+
+
+		<input type="submit" value="가입하기">
+
+    </fieldset>
+
+	</form>
+    
+</body>
+</html>

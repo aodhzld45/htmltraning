@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 우선순위 테스트</title>
+    <!-- 외부 CSS 설정 -->
+    <link rel="stylesheet" href="./css/test04.css">
+    <!-- 내부 스타일 시트 설정 -->
+    <style>
+        p {
+            font-size: 24px;
+            color: #73EDFF;
+        }
+        .p1 #pid1 #pid2{
+            font-size: 36px;
+            color: red;
+        }
+        h1 + p {
+            color: red;
+        }
+
+        section p {
+            color: blue;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>스타일 우선순위</h1>
+    <p class="p1" id="pid1" style="color: blue; background-color: yellow; font-size: 48px;" >인라인 스타일 class = p1 id = pid1</p>
+    <p class="p1" id="pid2" >class = p1 id = pid2</p>
+
+
+    <p class="p2" id="pid3"> pid3</p>
+    <p class="p2" id="pid4">pid4</p>
+    
+    <div>
+        test
+    </div>
+    <h1>인접 형제 선택자</h1>
+    <p>첫번째 p태그</p>
+    <p>두번째 p태그</p>
+    <p>세번째 p태그</p>
+
+    <section>
+
+        
+    </section>
+
+    
+
+    
+
+
+
+</body>
+</html>
