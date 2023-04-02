@@ -6,26 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>워드프로세서 실습</title>
     <style>
-        /* 내부 ㅅ타일 시트 */
-        table, th, td {
-        text-align: center;
-        margin-left:auto;
-        margin-right:auto;
-        border:1px solid black;
-        }
-
-        .tb_price {
-        /* width: 100%; */
-        width: 300px; 
-        height: 200px;
-        }
-
-        .tb_pricet .tb_title {
-            background-color: green;
-            color: white;
-        }
-
-        div {
+        /* 내부 스타일 시트 */
+        div.row {
         width: 100%;
         /* display: flex; */
         border: 1px solid #003458;
@@ -36,11 +18,35 @@
             float: left;
             box-sizing: border-box;
         }
+
         div.right {
             width: 50%;
             float: right;
             box-sizing: border-box;
         }
+
+        table, th, td {
+        text-align: center;
+        margin-left:auto;
+        margin-right:auto;
+        border:0.5px solid black;
+        }
+
+        .tb_price {
+        /* width: 100%; */
+        width: 300px; 
+        height: 200px;
+        }
+
+        .tb_title {
+            background-color: green;
+            color: white;
+        }
+        .tb_total {
+            background-color: rgb(195, 189, 189);
+            font-weight: bold;
+        }
+
         .no_dot {
          list-style-type: none;
         }
@@ -66,6 +72,9 @@
             text-align: right;
             margin-right: 5%;
         }
+        .tail_font{
+            text-align: center;
+        }
 
         </style>
 </head>
@@ -90,10 +99,9 @@
         유국을 유지했다. 섬유(Textile), 철강(Steel), 화학제품 등 대부분의 품목에서 1위 품목수가 증가하면서 세
         계 1위 품목을 전년 대비 128개 추가하여 빠른 속도로 세계 1위 품목 점유율을 높였다.
         </p>
+        <!-- 왼쪽  -->
+        <div class="left">
 
-            <div class="left">
-            <h5>왼쪽</h5>
-            <!-- HTML 주석입니다. -->
         <h3 style="text-align: center;">※ 국가별 1위 품목 수</h3>
 
         <table class="tb_price">
@@ -133,7 +141,7 @@
                 <td>68</td>
                 <td>1</td>
             </tr>
-            <tr>
+            <tr class="tb_total">
                 <td><strong>합계</strong></td>
                 <td>2,942</td>
                 <td>2,966</td>
@@ -155,8 +163,7 @@
                 </p>
             </li>
 
-            <li>
-                
+            <li> 
                 <p>
                     나. &nbsp;
                     우리나라 1위 품목별로 보면 화학제품, 철강
@@ -178,17 +185,18 @@
             </li>
         </ul>
         <p>1) 자료: <a href="./register.html"> UN Comtrade</a></p>
+
         </div>
 
             <div class="right">
-            <h5>오른쪽</h5>
+            <!-- <h5>오른쪽</h5> -->
             <h3>3. 세계시장에서의 위치</h3>
             <ul class="no_dot">
                 <li>
                     <p>
-                    가.  &nbsp;
-                    우리나라 1위 품목 상당수는 세계시장의 주
-                    요국들과 경합관계에 있는 것으로 나타났다.
+                        가.  &nbsp;
+                        우리나라 1위 품목 상당수는 세계시장의 주
+                        요국들과 경합관계에 있는 것으로 나타났다.
                     </p>
                 </li>
                 <li>
@@ -232,7 +240,11 @@
             ASEAN InvestmentReport,(2006)
             </p>
         </div>
+        <p class="tail_font" >국제무역연구원 제38권 제4호</p>
     </div>
+    
+
+      
   
 
  
