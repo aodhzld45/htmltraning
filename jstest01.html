@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <title>JStest01</title>
+</head>
+<body>
+<h1 id="heading">자바스크립트</h1>
+<p id="text">텍스트 클릭</p>
+<button id="btn01">Alert</button>
+<button id="btn02">Confirm</button>
+<button id="btn03">Prompt</button>
+<button id="numtest">배수</button>
+
+<h1 class="h1class">반갑습니다.</h1>
+
+
+<script>
+    // var heading = document.querySelector("#heading");
+    var btn01 = document.querySelector("#btn01");
+    var btn02 = document.querySelector("#btn02");
+    var btn03 = document.querySelector("#btn03");
+    
+    var heading = document.getElementById('heading');
+    var season = ["봄", "여름", "가을", "겨울"];
+
+    var index = season[0];
+
+    var n1 = 10;
+    var n2 = 20;
+
+    var sum = n1 += n2;
+    var num = typeof 100;
+
+    console.log(n1 + n2);
+    console.log(num);
+    console.log(season);
+    console.log(index.sizeof);
+    console.log(sum);
+
+    btn01.onclick = function() {
+        alert("ALERT");
+    }
+
+    btn02.onclick = function() {
+        confirm("CONFIRM");
+    }
+
+    
+    btn03.onclick = function() {
+        var name = prompt("이름을 입력하세요.", "이름입력" );
+        document.write("<b>" + name + "</b>");
+    }
+
+    heading.onclick = function headigOnclick() {
+        heading.style.color = 'red';
+    }
+
+</script>
+<script src="./js/change-color.js"></script> 
+
+
+</body>
+</html>
