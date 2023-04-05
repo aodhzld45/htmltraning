@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 응용문제</title>
+</head>
+<body>
+
+    <button id="gugudan">구구단</button><br>
+
+    <script>
+        /*
+        
+         i가 9에 도달하면(현재 dan 값의 표의 끝),
+          if 문에서 dan을 1 증가시키고 i를 0으로 재설정하여 다음 곱셈표의 숫자로 루프를 다시 시작
+        
+        */
+        var dan;
+        var i,j;
+
+        dan = 2;
+        for (i = 2; dan <= 9; i++) {
+            document.write(i + " X " + dan + " = " + i*dan + "<br>");                
+
+            if (i == 9) {
+                dan++;
+                i = 0;
+            }
+        }
+
+        document.write("<hr>");
+        
+        // for(i = 2; i <= 9; i++) {
+
+        //     document.write("<h3>" + i + "단</h3>");
+
+        //     for (j= 1; j <= 9; j++) {
+        //         document.write(i + " X " + j + " = " + i*j + "<br>");                
+        //     }
+
+        // }
+
+        document.write("<hr>");
+
+        for(i = 18; i <= 89; i++) {
+
+            dan = Math.floor(i/9); //내림
+            
+            var j = i % 9 + 1;
+            
+            document.write(dan + ' x ' + j + " = " + dan * j + "&nbsp <br>");
+            
+        }
+
+        document.write("<hr>");
+
+        var gugudan_btn = document.querySelector("#gugudan");
+        gugudan_btn.onclick = function() {
+
+            var num = prompt('숫자를 입력해주세요');
+            for(i=1;i<9;i++){
+                var gugudan = num * i;
+                document.write(num + 'x' + i + "=" + gugudan + '<br>')
+            }
+
+        }
+
+
+    </script>
+    
+</body>
+</html>

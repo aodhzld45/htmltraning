@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jstest03</title>
+</head>
+<body>
+    <script>
+        var n = prompt("숫자를 입력하세요.");
+        var msg = '';
+        if (n !== null) {
+            var nFact = 1; //결괏값
+            var i = 1; // 카운터
+
+            while (i <= n) {
+             document.write(nFact + 'x' + i);
+             nFact *= i;
+             i++;   
+            }
+            document.write("<br>");
+            msg = n + "i = " + nFact;
+        }
+        else 
+            msg = "값을 입력하지 않았습니다.";
+            document.write(msg); //결과 표시
+
+        
+    </script>
+</body>
+</html>

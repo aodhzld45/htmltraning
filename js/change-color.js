@@ -4,12 +4,13 @@ text.onclick = function() {
     var reply = confirm("색을 변경하시겠습니까?");
     console.log(reply);
 
-    // if (reply ? text.style.color = 'blue' :  false);
-    if (reply === true) {
-        text.color.style = 'blue';
-    }else {
-        false;
-    }
+    if (reply ? text.style.color = 'blue' :  false);
+    
+    // if (reply === true) {
+    //     text.color.style = 'blue';
+    // }else {
+    //     false;
+    // }
 
 }
 
