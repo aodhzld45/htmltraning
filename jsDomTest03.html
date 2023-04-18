@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsDomTest03</title>
+</head>
+<body>
+    <h1>Web Programming</h1>
+
+    <!-- <ul id="itemList">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul> -->
+
+    <div id="container" >
+        <h1>DOM을 공부합시다.</h1>
+            <!-- this.onclick='';의 의미 - a 링크를 클릭하면 addP() 함수가 한번만 실행 되도록 함. -->
+            <a href="#" onclick="addP(); this.onclick='';">더 보기</a>
+        <div id="info"></div>
+    </div>
+
+    <script>
+        function addP() {
+            var newP = document.createElement("p");
+            var newImg = document.createElement("img");
+            var srcNode = document.createAttribute("src");
+            var altNode = document.createAttribute("alt");
+            var txtNode = document.createTextNode("DOM은 document object model의 줄임말입니다.");
+           
+            newP.appendChild(txtNode);
+            document.getElementById("info").appendChild(newP);    
+            document.getElementById("info").append("test"); 
+            
+            srcNode.value = "./img/cup.jpg";
+            altNode.value = "돔 트리 예제 이미지";
+
+            newImg.setAttributeNode(srcNode);
+            newImg.setAttributeNode(altNode);
+         
+            // newImg.setAttribute(srcNode);
+            // newImg.setAttribute(altNode);
+            
+            document.getElementById("info").appendChild(newP);  
+            document.getElementById("info").appendChild(newImg); 
+
+            var info = document.getElementById('info');
+
+            console.log(info);
+            console.dir(info);
+
+            // console.log(newImg);
+            // console.dir(newImg);
+            // console.log(newP);
+            // console.dir(newP);
+        }
+
+    </script>
+
+</body>
+</html>

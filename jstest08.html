@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jstest08</title>
+</head>
+<body>
+    <script>
+            //익명 함수
+            var sum = function (a,b) {
+                return a + b;
+            }
+           // document.write("함수 실행 결과: " + sum(100, 299) + "<br>");
+
+            var n1 = 10; 
+            var n2 = 1.2;
+            var n3 = '100';
+            //typeof 로 자료형을 확인 가능
+
+            //즉시 싱행 함수
+            (function (a,b) {//매개변수 a, b {
+                sum2 = a + b; //전역 변수로 사용됨.
+
+            }(100, 200)); //인수
+
+            //document.write(sum2 + "<br>");
+
+            //화살표 함수
+            // const hello = () => alert("안녕하세요!");
+
+            // hello();
+
+            let hi = user => {document.write(user +  "님 안녕하세요? <br>")};
+
+            hi("test");
+
+            let plus = (c, d) => c + d;
+            let minus = (c, d) => c - d;
+            // let multiply = (c, d) => c * d;
+            // let divisor = (c, d) => c / d;
+
+            //push 추가
+
+            
+            //번지수 참조 배열 함수.      
+            
+            let arr = [plus, minus/*, multiply , divisor*/];
+
+            arr.push((c, d) =>  c * d );
+            arr.push((c, d) =>  c / d );
+
+
+            console.log(arr[2]);
+            console.log(arr[3]);
+
+
+            arr.forEach(function(item, index, array) {
+                console.log("item:" + item, "index" + index, "array" + array);   
+            });
+
+            for (let i = 0; i < arr.length; i++) {
+
+                document.write(arr[i] + ", 실행 결과 : " + arr[i](10, 5)  + "<br>");
+
+            }
+
+            //document.write(plus(10,10) + "<br>");
+        
+            // document.write(plus + ', typeof :' + typeof(plus) + "<br>");
+            // document.write(minus + ', typeof :' + typeof(minus) + "<br>");
+
+            // document.write(arr[0] + ", 실행 결과 : " + arr[0](100,200)  + "<br>");
+            // document.write(arr[1] + ", 실행 결과 : " + arr[1](100,200)  + "<br>");
+            // document.write(arr[2] + ", 실행 결과 : " + arr[2](200,100)  + "<br>");
+            // document.write(arr[3] + ", 실행 결과 : " + arr[3](200,100)  + "<br>");
+
+            console.log("arr / dir / dirxml==============================");
+            console.dir(arr);
+            console.dirxml(arr);
+            console.log("==============================");
+
+            console.log("plus / dir / dirxml==============================");
+            console.dir(plus);
+            console.dirxml(plus);
+            console.log("==============================");
+
+            console.log("minus  dir / dirxml==============================");
+            console.dir(minus);
+            console.dirxml(minus);
+            console.log("==============================");
+
+
+            // document.write(arr[0] + "<br>");
+            // document.write(arr[1] + "<br>");
+         
+    </script>
+</body>
+</html>

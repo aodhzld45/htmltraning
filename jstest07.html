@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재귀 함수 예제</title>
+</head>
+<body>
+    <script>
+
+            // function sum(n) {
+            //     document.write("==========" + n + "<br>")
+            //     if (n == 1) {
+            //         return 1;
+            //     }
+            //     return n + sum(n-1); //두번째 이후의 호출.
+            // }
+            // document.write("재귀호출 전 ====== <br>");
+            // document.write("누적 값 : " + sum(10) + "<br>"); //최초의 호출
+            // document.write("재귀호출 후 ====== <br>");
+
+            /*
+            정수 num과 k가 매개변수로 주어질 때, num을 이루는 숫자 중에 k가 있으면 num의 그 숫자가 있는 자리 수를 return하고
+             없으면 -1을 return 하도록 solution 함수를 완성해보세요.
+            */
+            function solution(num, k) {
+                var NumString = String(num);
+
+                for(let i=0; i< NumString.length; i++ ){
+                    if (NumString[i] === k ) {
+                        return i+1;
+                    }
+                } 
+
+            return answer;
+
+            }
+            
+
+            
+
+
+    </script>
+</body>
+</html>

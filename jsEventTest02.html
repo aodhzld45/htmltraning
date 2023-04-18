@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsEventTest01</title>
+</head>
+<body>
+
+    <button id="calc">계산기</button>
+    
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+    <button id="multiply">*</button>
+    <button id="divisor">/</button>
+
+    <script>
+
+        var calc = document.querySelector("#calc");
+        calc.onclick = calcOnClick;
+        var now = new Date();
+
+        function calcOnClick() {
+            var num1 = Number(prompt("연산할 첫번째 숫자를 입력해주세요. (숫자만)"));
+            var num2 = Number(prompt("연산할 두번째 숫자를 입력해주세요. (숫자만)"));
+            var op = prompt("연산자를 입력해주세요 (+, -, *, /)");
+            var result = 0;
+
+
+
+            // 계산식 조건문 + 반복문
+
+            document.write(num1 + "" + op + "" + num2 + " = " + result);
+
+
+        }
+
+        document.write(now);
+
+
+
+
+
+
+
+
+
+
+
+
+        //화살표 함수로 사칙연산 정의
+        let plus = (c, d) => c + d;
+        let minus = (c, d) => c + d;
+        let multiply = (c, d) => c + d;
+        let divisor = (c, d) => c + d;
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

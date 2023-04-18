@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jstest05</title>
+</head>
+<body>
+    <script>
+    //plus, minus 함수 만들기
+    //1부터 10까지 누적해서 더하는 함수 만들기 (재귀 구조)
+    function plus(num1,num2) {
+        return  num1 + num2;;
+        //document.write("plus 함수의 결과 = " + result + "<br>");
+    } 
+
+    // plus(10,20);
+
+    
+    function minus(num1,num2) {
+        return num1 - num2;
+        //document.write("minus 함수의 결과 = " + result + "<br>");
+
+    } 
+    // minus(10,20);
+
+    function calc(num1,num2, op) {
+        var result = '잘못된 연산입니다.';
+
+        switch (op) {
+            case "+":
+            result = plus(num1,num2);
+                break;
+
+            case "-":
+            result = minus(num1,num2);
+            break;
+            
+       
+        }
+        
+        return result;
+        
+    }
+
+
+
+
+
+
+    
+
+
+    // function add(num) {
+    //     var sum;
+    //     let num = 0;
+
+    //     for(let i=1; i<10; i++){
+    //         sum =  num += i;
+
+    //     }
+    //     document.write("1부터 10까지의 합 = " + sum + "<br>");
+    // }
+    // add(num);
+
+    // function f(n) {
+    // if (n <= 1) {
+    //    return 1 // 종료 조건
+    // }
+    // return n + f(n-1) // 재귀함수
+    // document.write(f(10));
+    // }
+  
+
+    </script>
+</body>
+</html>

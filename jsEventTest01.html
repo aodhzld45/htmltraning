@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsEventTest01</title>
+</head>
+<body>
+
+    <button id="change">버튼01</button>
+
+    <button id="change02">버튼02</button>
+
+    <button id="change03">버튼03</button>
+
+    <h1>선택자를 선택하지 않은 글자</h1>
+    <p id="changeText">바뀌는 글자</p>
+    <b>변수에 함수를 대입한 예제</b>
+    <h2>화살표(람다)를 이용한 이벤트</h2>
+    <p id="nowtime"></p>
+    <p id="arrConcat"></p>
+
+
+    <script>
+        var now = new Date();
+        var change = document.querySelector("#change");
+        var change02 = document.querySelector("#change02");
+        var nowtime = document.querySelector("#nowtime");
+
+        //concat 예제용 배열
+        var nums= [1, 2, 3,];
+        var chars = ["a", "b", "c", "d"];
+
+        change02.onclick = changColor;
+
+        // console.log("#############################################");
+
+        // console.log(typeof changColor);
+        // console.dir(changColor);
+
+        // console.log("#############################################");
+
+        // console.log(change);
+        // console.log(typeof change);
+        // console.dir(change);
+        // console.dirxml(change);
+
+        // console.log("#############################################");
+
+
+        change.onclick = function() {
+            var changeText = document.querySelector("#changeText");
+
+            document.querySelector("h1").style.color =  'blue';
+
+            changeText.style.color = 'red';
+        }
+
+        function changColor() {
+
+            document.querySelector("b").style.color = 'green';
+
+
+            nowtime.innerHTML = now.toLocaleString();
+            console.log(nowtime); 
+            console.dir(nowtime);
+
+            var numsConcat = nums.concat(chars);
+            var charsConcat = chars.concat(nums);
+
+            console.log(numsConcat);
+            console.dir(numsConcat);
+
+            console.log("=====================================");
+
+            console.log(charsConcat);
+            console.dir(charsConcat);
+
+            arrConcat.innerHTML = document.write("=합쳐진 배열=" + numsConcat + "==" + charsConcat);
+            
+            // document.write("현재 시각은 = " + now.toLocaleString());
+        }
+
+        //화살표(람다) 함수를 이용한 이벤트 
+        document.querySelector("#change03").onclick = () => document.querySelector("h2").style.color =  'purple';
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsEventTest02</title>
+</head>
+<body>
+    <img src="./img/cup.jpg" id="cup">
+    <img src="./img/card.jpg" id="card">
+
+    <script>
+
+        var cup = document.querySelector("#cup");
+
+        cup.onclick = function(event2) {
+            alert("이벤트 유형: " + event2.type + ", 이벤트 발생 위치: "
+            + event2.pageX + "," + event2.pageY);
+            console.log(this, event2);
+            console.dir(this, event2);
+            console.log(this);
+            console.dir(this);
+        }
+     
+        var card = document.querySelector("#card");
+
+        card.onclick = function(event2) {
+            alert("이벤트 유형: " + event2.type + ", 이벤트 발생 위치: "
+            + event2.pageX + "," + event2.pageY);
+            console.log(this, event2);
+            console.dir(this, event2);
+            console.log(this);
+            console.dir(this);
+        }
+
+    </script>
+</body>
+</html>
