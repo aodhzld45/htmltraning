@@ -11,6 +11,8 @@ signup_btn.onclick = signUp;
 function signUp() {
     document.querySelector("#signup_btn");
     alert("회원가입 버튼 클릭");
+
+    chkPwd()
 }
 
 //인증번호 발급 부분 6자리 무작위 문자열
