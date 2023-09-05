@@ -1,0 +1,12 @@
+div {
+    width: 500px;
+    height: 500px;
+
+    background: url("../img/logo.png");
+
+}
+
+span {
+    font-size: 50px;
+    background-color: blue;
+}
